@@ -1,0 +1,41 @@
+USE `alumnos_escom`;
+CREATE TABLE `alumno` (
+    `boleta` varchar(10) NOT NULL,
+    `nombre` varchar(64) NOT NULL,
+    `apellido_paterno` varchar(64) NOT NULL,
+    `apellido_materno` varchar(64) NOT NULL,
+    `fecha_nacimiento` date DEFAULT NOT NULL,
+    `genero` char NOT NULL,
+    `curp` varchar(18) NOT NULL,
+    `calle` varchar(30) NOT NULL,
+    `numero` varchar(30) NOT NULL,
+    `colonia` varchar(30) NOT NULL,
+    `alcaldia` varchar(30) NOT NULL,
+    `cp` int NOT NULL,
+    `telefono` bigint NOT NULL,
+    `email` varchar(64) NOT NULL,
+    `escuela_procedencia` varchar(64) NOT NULL,
+    `estado` varchar(30) NOT NULL,
+    `promedio` float NOT NULL,
+    `numero_opcion` smallint NOT NULL,
+    `laboratorio_asignado` varchar(10) NOT NULL,
+    `horario_asignado` datetime NOT NULL,
+    PRIMARY KEY(`boleta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `alumno`(`boleta`, `nombre`, `apellido_paterno`, `apellido_materno`, `fecha_nacimiento`, `genero`, `curp`, `calle`, `numero`, `colonia`, `alcaldia`, `cp`, `telefono`, `email`, `escuela_procedencia`, `estado`, `promedio`, `numero_opcion`, `laboratorio_asignado`, `horario_asignado`) VALUES ('30000','Ara','Munoz','Chavez','2017-02-04','F','ARARDAD23','Pedro','2','Valle','Coyoacan','20203','55555555','ara@gmail.com','PREPA','EDOMEX','9.5','1','lab_2','2023-02-02 9:30:00')
+INSERT INTO `alumno`(`boleta`, `nombre`, `apellido_paterno`, `apellido_materno`, `fecha_nacimiento`, `genero`, `curp`, `calle`, `numero`, `colonia`, `alcaldia`, `cp`, `telefono`, `email`, `escuela_procedencia`, `estado`, `promedio`, `numero_opcion`, `laboratorio_asignado`, `horario_asignado`) VALUES ('30000','Ara','Munoz','Chavez','2017-02-04','F','ARARDAD23','Pedro','2','Valle','Coyoacan','20203','55555555','ara@gmail.com','PREPA','EDOMEX','9.5','1','lab_2','2023-02-02 9:30:00')
+
+
+CREATE TABLE `usuario` (
+  `id` varchar(10) NOT NULL,
+  `nombre` varchar(64) NOT NULL,
+  `apellido_paterno` varchar(64) NOT NULL,
+  `apellido_materno` varchar(64) DEFAULT NULL,
+  `email` varchar(128) NOT NULL,
+  `fecha_nacimiento` date DEFAULT NULL,
+  `usuario` varchar(32) NOT NULL,
+  `contrasena` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO `usuario`(`id`, `nombre`, `apellido_paterno`, `apellido_materno`, `email`, `fecha_nacimiento`, `usuario`, `contrasena`) VALUES ('1','nombre','apellido1','apellido2','email@gmail.com','2023-02-02','user','admin')
